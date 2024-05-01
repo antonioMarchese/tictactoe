@@ -85,7 +85,7 @@ def winner(board: list[list]) -> str | None:
         val = board[0][i]
         score = 1
         for j in range(1, len(board)):
-            if val == board[j][i]:
+            if val == board[j][i] and val is not EMPTY:
                 score += 1
         if score == 3:
             return val
